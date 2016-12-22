@@ -8,15 +8,12 @@
 @if (App::environment()==='local')
 	<script src="/static/build/dev/js/systemjs-config.js?v=<?php echo $cacheVersion ?>"></script>
 	<script src="/static/build/dev/js/global.js?v=<?php echo $cacheVersion ?>"></script>
-	
-	<script>
-	System.import('build/dev/js/lib/main.js');
-	</script>
 @else
 	<script src="/static/build/Release/js/systemjs-config.min.js?v=<?php echo $cacheVersion ?>"></script>
 	<script src="/static/build/Release/js/global.min.js?v=<?php echo $cacheVersion ?>"></script>
-	<script>
-	System.import('build/Release/js/lib/main.js');
-	</script>
 @endif
+	<script>
+	System.import('globals');
+	System.import('app/login/main');
+	</script>
 @yield('scripts')

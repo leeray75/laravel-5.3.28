@@ -27,7 +27,7 @@
             </ul>
           </li>
           <li>
-          	<a href="javascript: void(0);" class="log-in-out-link"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="log-in-out-copy">Log In</span></a>
+          	<a href="javascript: void(0);" class="log-in-link"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <span class="log-in-out-copy">Log In</span></a>
           </li>            
         </ul>
       </div><!-- /#collapse -->

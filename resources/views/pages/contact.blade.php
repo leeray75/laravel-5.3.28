@@ -8,7 +8,6 @@
     scope.GlobalVariables = scope.GlobalVariables || {};
     scope.GlobalVariables.app = scope.GlobalVariables.app || {};
     scope.GlobalVariables.app.mainSrc="./contact-us/main.js";
-    scope.GlobalVariables.app.templateSrc= scope.GlobalVariables.environment=="local" ? '/static/build/dev/templates/apps/contact-us/' : '/static/build/Release/templates/apps/contact-us/';
   })(window);
   </script>
 @endsection

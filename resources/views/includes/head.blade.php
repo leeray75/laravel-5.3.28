@@ -18,12 +18,13 @@ $canonicalHref = str_replace('//','/',str_replace('index.php','',$canonicalHref)
 @endif
 <script language="javascript">
 (function(scope){
+  var environment = "{{ App::environment() }}";
   scope.GlobalVariables = scope.GlobalVariables || {};
-  scope.GlobalVariables.environment = "{{ App::environment() }}";
+  scope.GlobalVariables.environment = environment;
   scope.GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
   scope.GlobalVariables.app = scope.GlobalVariables.app || {};
   scope.GlobalVariables.app.mainSrc="";
-  scope.GlobalVariables.app.templateSrc= "";
+  scope.GlobalVariables.app.templateSrc= environment=="local" ? '/static/build/dev/templates/apps/' : '/static/build/Release/templates/apps/';
 })(window);
 </script>
 </head>
