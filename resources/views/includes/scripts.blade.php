@@ -1,14 +1,16 @@
 <?php include('../static/build/CacheBuster.php'); ?>
 <script language="javascript">
-(function(scope){
+(function(global){
   var environment = "{{ App::environment() }}";
-  scope.GlobalVariables = scope.GlobalVariables || {};
-  scope.GlobalVariables.environment = environment;
-  scope.GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
-  scope.GlobalVariables.app = scope.GlobalVariables.app || {};
-  scope.GlobalVariables.app.mainSrc="";
-  scope.GlobalVariables.app.templateSrc= environment=="local" ? '/static/build/dev/templates/apps/' : '/static/build/Release/templates/apps/';
-  scope.GlobalVariables.modules = scope.GlobalVariables.modules || {};
+  var staticPath = environment=="local" ? '/static/build/dev' : '/static/build/Release';
+  global.GlobalVariables = global.GlobalVariables || {};
+  global.GlobalVariables.environment = environment;
+  global.GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
+  global.GlobalVariables.staticPath = staticPath;
+  global.GlobalVariables.app = global.GlobalVariables.app || {};
+  global.GlobalVariables.app.mainSrc="";
+  global.GlobalVariables.app.templateSrc= staticPath+"/templates/apps/";
+  global.GlobalVariables.modules = global.GlobalVariables.modules || {};
 })(window);
 </script>
 <script src="//unpkg.com/core-js/client/shim.min.js"></script>

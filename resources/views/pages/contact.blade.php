@@ -13,6 +13,7 @@
 @endsection
 @section('scripts')
   @if (App::environment()==='local')
+    <script src="/static/build/dev/js/apps/contact-us/contact-us.combo.js"></script>
     <script>
         System.import('app').catch(function(err){ console.error(err); });
     </script>
