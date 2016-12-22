@@ -19,3 +19,7 @@ Route::get('/', function()
 {
     return View::make('pages.home');
 });
+Route::get('/resume', function()
+{
+    return View::make('pages.resume');
+});
