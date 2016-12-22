@@ -26,3 +26,6 @@ Route::get('/resume', function()
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('contact', 
+  ['as' => 'contact', 'uses' => 'ContactController@create']);

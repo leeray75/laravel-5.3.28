@@ -11,7 +11,7 @@
         <ul class="nav navbar-nav">
           <li><a href="/www/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
           <li><a href="/www/resume"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> My Resume</a></li>
-          <li><a href="/www/site/contact"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
+          <li><a href="/www/contact"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</a></li>
           <li class="dropdown"><a href="/www/demo" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-list-alt" ariah-hidden="true"></span> Demos<span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu">
             	<li><a href="https://plnkr.co/edit/Sr9PH4" target="_blank"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"> </span> AngularJS 1.5: Tour of Heroes (Plunker)</a></li>
