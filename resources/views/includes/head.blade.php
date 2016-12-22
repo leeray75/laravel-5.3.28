@@ -8,7 +8,6 @@ $canonicalHref = str_replace('//','/',str_replace('index.php','',$canonicalHref)
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 <link href='//fonts.googleapis.com/css?family=Lobster|Open+Sans:400,300,300italic,600,400italic,600italic,700,700italic,800,800italic|Roboto+Condensed:400,300,300italic,400italic,700,700italic|Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic|PT+Sans:400,400italic,700,700italic|Droid+Serif:400,400italic,700,700italic|Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic|Merriweather:400,300,300italic,400italic,700,700italic,900,900italic|Play:400,700' rel='stylesheet' type='text/css'>
-<meta name="description" content="Welcome to UI Deliverables! I am a front-end developer with experience in developing in HTML, JavaScript, CSS.">
 
 @if (App::environment()==='local')
 	<link rel="stylesheet" type="text/css" href="/static/build/dev/css/global-styles.css?v=<?php echo $cacheVersion ?>" />
