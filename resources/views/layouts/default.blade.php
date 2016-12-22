@@ -16,6 +16,7 @@
         <footer data-role="footer">
         @include('includes.footer')
         </footer>
-
+        
+        @include('includes.scripts')
     </body>
 </html>

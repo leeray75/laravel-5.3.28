@@ -1,4 +1,12 @@
 <?php
+$APP_ENV = 'production';
+$APP_DEBUG = false;
+$APP_URL = 'https://'.$_SERVER['HTTP_HOST'].'/www';
+if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
+    $APP_ENV = 'local';
+    $APP_DEBUG = true;
+    $APP_URL = 'http://'.$_SERVER['HTTP_HOST'].'/www';
+}
 
 return [
 
@@ -12,7 +20,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'UI Deliverables',
 
     /*
     |--------------------------------------------------------------------------
@@ -25,7 +33,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', $APP_ENV),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +46,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', $APP_DEBUG),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +59,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', $APP_URL),
 
     /*
     |--------------------------------------------------------------------------
