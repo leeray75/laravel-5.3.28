@@ -23,3 +23,6 @@ Route::get('/resume', function()
 {
     return View::make('pages.resume');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

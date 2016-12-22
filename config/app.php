@@ -1,13 +1,4 @@
 <?php
-$APP_ENV = 'production';
-$APP_DEBUG = false;
-$APP_URL = 'https://'.$_SERVER['HTTP_HOST'].'/www';
-if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false) {
-    $APP_ENV = 'local';
-    $APP_DEBUG = true;
-    $APP_URL = 'http://'.$_SERVER['HTTP_HOST'].'/www';
-}
-
 return [
 
     /*
@@ -33,7 +24,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', $APP_ENV),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -46,7 +37,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', $APP_DEBUG),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -59,7 +50,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', $APP_URL),
+    'url' => env('APP_URL', 'http://localhost/www'),
 
     /*
     |--------------------------------------------------------------------------
