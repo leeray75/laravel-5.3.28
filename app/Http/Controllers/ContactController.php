@@ -49,7 +49,7 @@ class ContactController extends Controller
 
         $response = new \stdClass();
         $response->status="success";
-        $response->message="Thanks for contacting UI Deliveverables";
+        $response->message="Thank you for contacting UI Deliverables!";
       
         return response()->json($response);
         //return \Redirect::route('contact')->with('message', 'Thanks for contacting us!');

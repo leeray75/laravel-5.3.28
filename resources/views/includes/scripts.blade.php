@@ -3,6 +3,7 @@
 <script src="//unpkg.com/zone.js@0.6.25?main=browser"></script>
 <script src="//unpkg.com/reflect-metadata@0.1.8"></script>
 <script src="//unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/1.1.13-1/ng2-bootstrap.min.js"></script>
 @yield('global-scripts')
 @if (App::environment()==='local')
 	<script src="/static/build/dev/js/systemjs-config.js?v=<?php echo $cacheVersion ?>"></script>
