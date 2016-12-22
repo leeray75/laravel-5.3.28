@@ -51,8 +51,7 @@ class ContactController extends Controller
         $response->status="success";
         $response->message="Thanks for contacting UI Deliveverables";
       
-        return response(json_encode($response))
-            ->header('Content-Type','application/json');
+        return response()->json($response);
         //return \Redirect::route('contact')->with('message', 'Thanks for contacting us!');
     }
 
