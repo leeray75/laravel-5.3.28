@@ -1,44 +1,33 @@
 <?php include('../static/build/CacheBuster.php'); ?>
 @extends('layouts.default')
 @section('head.title',"UI Deliverables: Contact")
-@section('head.style','')
-@section('scripts')
+@section('head.style','apps/contact-us')
+@section('global-scripts')
+  <script>
+  (function(scope){
+    scope.GlobalVariables = scope.GlobalVariables || {};
+    scope.GlobalVariables.app = scope.GlobalVariables.app || {};
+    scope.GlobalVariables.app.mainSrc="./contact-us/main.js";
+    scope.GlobalVariables.app.templateSrc= scope.GlobalVariables.environment=="local" ? '/static/build/dev/templates/apps/contact-us/' : '/static/build/Release/templates/apps/contact-us/';
+  })(window);
+  </script>
 @endsection
-
+@section('scripts')
+  @if (App::environment()==='local')
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  @else
+    <script src="/static/build/Release/js/apps/contact-us/contact-us.combo.min.js"></script>
+    <script>
+        System.import('main').catch(function(err){ console.error(err); });
+    </script>
+  @endif
+@endsection
 @section('head.meta.description')
 Fill out this form to contact me.
 @endsection
 
 @section('content')
-<section id="contact">
-  <h1>Contact UI Deliverables</h1>
-
-<ul>
-    @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-    @endforeach
-</ul>
-
-<form method="post" action="/www/api/contact">
-
-  <div class="form-group">
-    <label>Your Name</label>
-    <input name="name" type="text" required class="form-control" placeholder="Your name">
-  </div>
-
-  <div class="form-group">
-    <label>Your E-mail Address</label>
-    <input name="email" type="email" required class="form-control" placeholder="Your e-mail address">
-  </div>
-
-  <div class="form-group">
-    <label>Your Message</label>
-    <textarea name="message" required class="form-control" placeholder="Your message"></textarea>
-  </div>
-
-  <div class="form-group">
-    <input type="submit" value="Contact Us!" class="btn btn-primary">
-  </div>
-</form>
-</section>
+<contact-us></contact-us>
 @endsection

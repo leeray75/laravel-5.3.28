@@ -17,9 +17,14 @@ $canonicalHref = str_replace('//','/',str_replace('index.php','',$canonicalHref)
 	<link rel="stylesheet" type="text/css" href="/static/build/Release/css/@yield('head.style').css?v=<?php echo $cacheVersion ?>" />
 @endif
 <script language="javascript">
-var GlobalVariables = GlobalVariables || {};
-GlobalVariables.environment = "{{ App::environment() }}";
-GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
+(function(scope){
+  scope.GlobalVariables = scope.GlobalVariables || {};
+  scope.GlobalVariables.environment = "{{ App::environment() }}";
+  scope.GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
+  scope.GlobalVariables.app = scope.GlobalVariables.app || {};
+  scope.GlobalVariables.app.mainSrc="";
+  scope.GlobalVariables.app.templateSrc= "";
+})(window);
 </script>
 </head>
 <meta charset="utf-8">

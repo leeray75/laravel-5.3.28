@@ -8,7 +8,7 @@
         <header>
         @include('includes.header')
         </header>
-
+        
         <main class="container" data-role="content">
         @yield('content')
         </main>
@@ -16,7 +16,6 @@
         <footer data-role="footer">
         @include('includes.footer')
         </footer>
-        
         @include('includes.scripts')
     </body>
 </html>
