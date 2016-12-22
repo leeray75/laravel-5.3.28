@@ -5,9 +5,11 @@
 @section('global-scripts')
 @endsection
 @section('scripts')
-    <script>
-    System.import('pages/homepage');
-    </script>
+  @if (App::environment()==='local')
+    <script src="/static/build/dev/js/pages/homepage.js?v=<?php echo $cacheVersion ?>"></script>
+  @else
+    <script src="/static/build/Release/js/pages/homepage.min.js?v=<?php echo $cacheVersion ?>"></script>
+  @endif
 @endsection
 @section('head.meta.description')
 I am a front end developer with experience in developing in HTML/HTML5, JavaScript, CSS/CSS3. I have experience with JavaScript libraries and frameworks such as jQuery, AngularJS, and Backbone.js. I also have knowledge working with Bootstrap, a responsive web framework. I am always looking forward to new opportunities and working in a dynamic learning environment where I can contribute my current skills, and grow through new opportunities.

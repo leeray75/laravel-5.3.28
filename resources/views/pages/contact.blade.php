@@ -13,15 +13,9 @@
 @endsection
 @section('scripts')
   @if (App::environment()==='local')
-    <script src="/static/build/dev/js/apps/contact-us/contact-us.combo.js"></script>
-    <script>
-        System.import('app').catch(function(err){ console.error(err); });
-    </script>
+    <script src="/static/build/dev/js/bundles/contact-us.bundle.js?v=<?php echo $cacheVersion ?>"></script>
   @else
-    <script src="/static/build/Release/js/apps/contact-us/contact-us.combo.min.js"></script>
-    <script>
-        System.import('main').catch(function(err){ console.error(err); });
-    </script>
+    <script src="/static/build/Release/js/bundles/contact-us.bundle.min.js?v=<?php echo $cacheVersion ?>"></script>
   @endif
 @endsection
 @section('head.meta.description')
