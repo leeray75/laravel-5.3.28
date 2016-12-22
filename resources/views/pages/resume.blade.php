@@ -15,7 +15,7 @@ I am a  Senior Front End/UI Developer with Strong User Interface,  Bootstrap/jQu
     <h2 itemprop="name">Raymond Lee</h2>
     <div id="personal-info">   
     Edison, NJ, 08817<br>
-    hoyenlee@gmail.com
+    ui.deliverables@gmail.com
     </div>
      
   </div>
