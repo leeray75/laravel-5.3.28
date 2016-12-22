@@ -1,4 +1,16 @@
 <?php include('../static/build/CacheBuster.php'); ?>
+<script language="javascript">
+(function(scope){
+  var environment = "{{ App::environment() }}";
+  scope.GlobalVariables = scope.GlobalVariables || {};
+  scope.GlobalVariables.environment = environment;
+  scope.GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
+  scope.GlobalVariables.app = scope.GlobalVariables.app || {};
+  scope.GlobalVariables.app.mainSrc="";
+  scope.GlobalVariables.app.templateSrc= environment=="local" ? '/static/build/dev/templates/apps/' : '/static/build/Release/templates/apps/';
+  scope.GlobalVariables.modules = scope.GlobalVariables.modules || {};
+})(window);
+</script>
 <script src="//unpkg.com/core-js/client/shim.min.js"></script>
 <script src="//unpkg.com/zone.js@0.6.25?main=browser"></script>
 <script src="//unpkg.com/reflect-metadata@0.1.8"></script>
@@ -13,7 +25,6 @@
 	<script src="/static/build/Release/js/global.min.js?v=<?php echo $cacheVersion ?>"></script>
 @endif
 	<script>
-	System.import('globals');
-	System.import('app/login/main');
+		System.import('globals');
 	</script>
 @yield('scripts')
