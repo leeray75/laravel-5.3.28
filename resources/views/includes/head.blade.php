@@ -28,3 +28,4 @@ GlobalVariables['HTTP_HOST'] = "{{ $_SERVER['HTTP_HOST'] }}";
 <meta name="author" content="Raymond Lee">
 
 <title>@yield('head.title')</title>
+

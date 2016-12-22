@@ -1,11 +1,17 @@
 <?php include('../static/build/CacheBuster.php'); ?>
-
+<script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+<script src="/static/config.js"></script>
 @if (App::environment()==='local')
-	<script src="/static/node_modules/jquery/dist/jquery.min.js"></script>
-	<script src="/static/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="/static/build/dev/js/global.js?v=<?php echo $cacheVersion ?>"></script>
 	<script src="/static/build/dev/js/@yield('scripts').js?v=<?php echo $cacheVersion ?>"></script>
+	<script>
+	System.import('build/dev/js/lib/main.js');
+	</script>
 @else
-	<script src="//unpkg.com/jquery@3.1.1/dist/jquery.min.js"></script>
-	<script src="//unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	<script src="/static/build/Release/js/global.min.js?v=<?php echo $cacheVersion ?>"></script>
 	<script src="/static/build/Release/js/@yield('scripts').min.js?v=<?php echo $cacheVersion ?>"></script>
+	<script>
+	System.import('build/Release/js/lib/main.js');
+	</script>
 @endif
+
