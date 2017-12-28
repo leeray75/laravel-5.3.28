@@ -6,7 +6,7 @@
 @endsection
 @section('scripts')
   @if (App::environment()==='local')
-    <script src="/static/build/dev/js/pages/homepage.js?v=<?php echo $cacheVersion ?>"></script>
+    <script src="/static/build/dev/js/bundles/homepage.bundle.js?v=<?php echo $cacheVersion ?>"></script>
   @else
     <script src="/static/build/Release/js/pages/homepage.min.js?v=<?php echo $cacheVersion ?>"></script>
   @endif

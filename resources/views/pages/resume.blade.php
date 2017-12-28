@@ -35,8 +35,20 @@ I am a  Senior Front End/UI Developer with Strong User Interface,  Bootstrap/jQu
   </section>
   <section id="professional-experience">
     <h3>PROFESSIONAL  EXPERIENCE</h3>
-    <h4>B&amp;H Photo<br>
-      <span itemprop="title">Front End Developer</span>, May 2015 – November 2016</h4>
+    <h4>WebMD</h4>
+    <div><span itemprop="title">Front End Developer</span>, December 2016 – Present</div>
+    <ul>
+      <li>Develop with ReactJS, Reflux, Redux, ECMAScript 6 (ES6), Node/NPM, Webpack, HTML/HTML5, CSS/CSS3, SASS/SCSS, GIT, JSP</li>
+      <li>Develop customizable progams and modules configurable with data from JSON.</li>
+      <li>Integrate video player using Akamai's Adaptive Media Player (AMP) into various projects</li>
+      <li>Implement a Qustionnaire/Poll module with ReactJS and Reflux</li>
+      <li>Create responsive sites using breakpoints with CSS media queries</li>
+      <li>Re-code and update older JavaScript with jQuery into modern structured MVC framework with ReactJS and ES6</li>
+      <li>Worked in a Agile development environment with JIRA and Bitbucket</li>
+    </ul>
+
+    <h4>B&amp;H Photo</h4>
+    <div><span itemprop="title">Front End Developer</span>, May 2015 – November 2016</div>
     <ul>
       <li>Developed with  various languages, libraries and frameworks: HTML/HTML5, CSS/CSS3, JavaScript,  jQuery, Backbone/Marionette, AngularJS, RequireJS, JSP</li>
       <li>Used SASS to  simplify CSS development &amp; maintenance</li>
